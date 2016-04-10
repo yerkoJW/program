@@ -1,0 +1,35 @@
+// nota_mientras.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+void main()
+{ 
+	int i,cn,np,ef,p1,p2,p3;
+	float nf;
+	cout<< "cantida de alumnos: ";
+	cin>> cn;
+	i=1;
+	while (i<=cn)
+	{
+		
+		cout<<"ingrese nota del practico: ";
+	    cin>> np;
+		cout<<"ingrese nota del primer parcial: ";
+	    cin>> p1;
+		cout<<"ingrese nota del segundo parcial: ";
+		cin>> p2;
+		cout<<"ingrese nota del tercer parcial: ";
+		cin>> p3;
+		cout<<"Introduzca la nota del examen final: ";
+	    cin>> ef;
+		
+		nf=np*0.2+((p1+p2+p3)/3)*0.4+ef*0.4;
+		cout<< " La nota final es: "<<nf<<endl;
+	i=i+i;
+	}
+	getch();
+}
