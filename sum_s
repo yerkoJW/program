@@ -1,0 +1,42 @@
+// sum_s.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	int i,n;
+	float np,p1,p2,p3,ef,nf,s;
+	cout<<"ingrese numero de estudiantes: "<<endl;
+	cin>>n
+	s=0;
+	i=0;
+	while (i<n)
+	{
+		cout<<"ingrese nota del practico: "<<endl;
+		cin>>np;
+		cout<<"ingrese nota del primer parcial: "<<endl;
+		cin>>p1;
+		cout<<"ingrese nota del segundo parcial: "<<endl;
+		cin>>p2;
+		cout<<"ingrese nota del tercer parcial: "<<endl;
+		cin>>p3;
+		cout<<"ingrese nota del examen final: "<<endl;
+		cin>>ef;
+
+		nf= np*0.2+((p1+p2+p3)/3)*0.4+ef*0.4;
+		cout<<"la nota final es: "<<nf<<endl;
+		getch();
+		
+		system ("cls");
+		s=s*nf;
+		i=i+1;
+	}
+	cout<<"la suma de todas las notas finales es: "<<s<<endl;
+	cout<<"el promedio de los estudiantes ees de: "<<s/n<<endl;
+	getch();
+	return 0;
+}
