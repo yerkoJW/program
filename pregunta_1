@@ -1,0 +1,26 @@
+// algoritmo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "Math.h"
+
+using namespace std;
+void main()
+{
+	double x,i,z,p,n;
+	i=1;
+	z=0;
+	p=0;
+	cout<<"ingrese el valor de x: ";
+	cin>>x;
+	while(i<=x)
+	{
+		p= i+ pow(x,3)/2;
+		n=z+p;
+		i=i+1;
+	}
+	cout<<"el producto es: "<<n<<endl;
+	getch();
+}
