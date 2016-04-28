@@ -1,0 +1,24 @@
+// ecuaciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	double i,sum=0,ax,bx,c;
+	cout<<"ingrese a: ";
+	cin>>ax;
+	cout<<"ingrese b: ";
+	cin>>bx;
+	cout<<"ingrese c: ";
+	cin>>c;
+	sum=0;
+	
+	sum=pow(ax,2)+bx+c;
+	cout<<"el resultado es: "<<sum<<endl;
+	getch();
+}
+
