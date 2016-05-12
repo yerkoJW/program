@@ -1,0 +1,80 @@
+// MENU_FUNCIONES.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+using namespace std;
+
+float are_cuadrado (float l);
+void potencia (float n, int y, float & z);
+int MCD (int num1, int num2);
+void main()
+{
+	int a,b,y,R3,opcion,R1;
+	float l,x,R2;
+	system ("color 6A");
+	do{
+		cout<<endl;
+		cout<<"1.-cuadrado"<<endl;
+		cout<<"2.-potencia"<<endl;
+		cout<<"3.-MCD"<<endl;
+		cout<<"0.-salir"<<endl;
+		cout<<"elige opcion: ";
+		cin>>opcion;
+		switch (opcion){
+		case 1: {
+			cout<<"ingrese l: ";
+			cin>>l;
+			R1= are_cuadrado (l);
+			cout<<"el area del cuadrado es: "<<R1<<endl;break;
+				}
+		case 2: {
+			cout<<"ingrese x: ";
+			cin>>x;
+			cout<<"ingrese y: ";
+			cin>>y;
+			potencia (x,y,R2);
+			cout<<"el resultado de la potencia es: "<<R2<<endl;break;
+				}
+		case 3: { 
+			cout<<"ingrese primer numero: ";
+			cin>>a;
+			cout<<"ingrese segundo numero: ";
+			cin>>b;
+			R3= MCD(a,b);
+			cout<<"MCD de los numeros es : "<<R3<<endl;break;
+				}
+		case 0: {
+			cout<<"salir"<<endl;break; 
+				}
+		default: {
+			cout<<"opcion invalida"<<endl;break;
+				 }
+		}getch();
+		system ("cls");
+	}while (opcion!=0);
+	getch();
+}
+float are_cuadrado (float l){
+float R1;
+R1=l*l;
+return (R1); }
+void potencial (float n, int y, float & z) {
+	z=1;
+	for (int i=2;i<=y;i++)
+z=z*n;
+}
+int MCD (int num1, int num2){
+	int x;
+	while (num1!=num2);
+	{
+		if (num1>num2)
+			num1=num1-num2;
+		else
+			num2=num2-num1;
+	}
+	x=num1;
+	return x;
+}
